@@ -4,10 +4,7 @@ import { FC } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
 
-export const enum AppLinkTheme {
-    PRIMARY = "primary",
-    INVERTED = "inverted",
-}
+export type AppLinkTheme = 'primary' | 'inverted';
 
 interface AppLinkProps extends LinkProps{
   className?: string;
@@ -15,11 +12,11 @@ interface AppLinkProps extends LinkProps{
 
 }
 
-export const AppLink: FC<AppLinkProps> = (props) => {
+export const AppLink = (props: AppLinkProps) => {
     const {
         to,
         className,
-        theme=AppLinkTheme.PRIMARY,
+        theme='primary',
         children,
         ...otherProps
     } = props;
