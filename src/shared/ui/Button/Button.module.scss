@@ -1,14 +1,17 @@
-.Button{
+.Button {
     color: var(--primary-color);
-    &.contained{
+
+    &.contained {
         background-color: var(--inverted-primary-color);
         border: none;
-    };
-    &.outlined{
+    }
+
+    &.outlined {
         background: transparent;
-        border: 1px solid var(--inverted-primary-color)
-    };
-    &.clear{
+        border: 1px solid var(--inverted-primary-color);
+    }
+
+    &.clear {
         background-color: transparent;
         border: none;
     }
