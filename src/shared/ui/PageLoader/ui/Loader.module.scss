@@ -1,0 +1,36 @@
+.Loader {
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 20px 0 var(--loader-color1), -20px 0 var(--loader-color2);
+        background: var(--loader-color1);
+    }
+
+    33% {
+        box-shadow: 20px 0 var(--loader-color1), -20px 0 var(--loader-color2);
+        background: var(--loader-color2);
+    }
+
+    66% {
+        box-shadow: 20px 0 var(--loader-color2), -20px 0 var(--loader-color1);
+        background: var(--loader-color2);
+    }
+
+    100% {
+        box-shadow: 20px 0 var(--loader-color2), -20px 0 var(--loader-color1);
+        background: var(--loader-color1);
+    }
+}
